@@ -103,7 +103,7 @@ elif choice == 2:
     user_string = input()
     print(morse_to_text(user_string))
 elif choice == 3:
-    print("Morse output will be written to \'msg.txt\'\nPlaintext output will be written to \'msg_translated.txt\'\n")
+    print("Morse output will be written to \'msg.txt\'\nPlaintext output will be written to \'msg_translated.txt\'\nLeft-Click = -\nRight-Click = .\nMiddle-Click = Space\n")
     with Listener(on_move=on_move, on_click=on_click, on_scroll=on_scroll) as listener:
         with open(file, "a") as output:
             listener.join()
