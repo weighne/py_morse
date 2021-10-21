@@ -2,9 +2,9 @@
 Write morse code with mouse clicks
 
 ## How it works
-Left-Click: -
-Right-Click: .
-Middle-Click: Space
+Left-Click: -  
+Right-Click: .  
+Middle-Click: Space  
 
 Each character entered is written to a file (msg.txt). On middle-click, the script will take the entered morse characters (dots and dashes), then translate them back to plaintext and write them to a separate file (msg_translated.txt). 
 
