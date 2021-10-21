@@ -11,4 +11,4 @@ Each character entered is written to a file (msg.txt). On middle-click, the scri
 ## Why did I do this?
 Mark asked me to: 
 
-![IMG_5392](https://user-images.githubusercontent.com/60398449/138315937-3ab62db4-50c0-4ab2-9f93-c82919b4b6cd.jpg =250x)
+![IMG_5392](https://user-images.githubusercontent.com/60398449/138316335-da11f78f-390b-45eb-b704-1feee9a1f2c5.jpg)
