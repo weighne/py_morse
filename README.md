@@ -12,3 +12,5 @@ Each character entered is written to a file (msg.txt). On middle-click, the scri
 Mark asked me to: 
 
 ![IMG_5392](https://user-images.githubusercontent.com/60398449/138316335-da11f78f-390b-45eb-b704-1feee9a1f2c5.jpg)
+
+It took slightly less than a few days...
