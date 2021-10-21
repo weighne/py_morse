@@ -34,8 +34,36 @@ def translate(phrase):
     phrase.clear()
 
 
+def text_to_morse(phrase):
+    translated_phrase = []
+    for letter in phrase:
+        for x in alphabet:
+            if letter.upper() == alphabet[x]:
+                translated_phrase.append(x)
+            elif letter == " ":
+                translated_phrase.append("/")
+            else:
+                continue
+    return " ".join(translated_phrase)
+
+
+def morse_to_text(morse):
+    morse_phrase = morse.split(" ").strip()
+    translated_phrase = []
+    for x in morse_phrase:
+        for y in alphabet:
+            if x == y:
+                translated_phrase.append(alphabet[x])
+            elif x == " ":
+                translated_phrase.append(" ")
+            else:
+                continue
+    return "".join(translated_phrase)
+
+
+
 def on_click(x, y, button, pressed):
-    print(button)
+    sys.stdout.write("")
     try:
         if button == mouse.Button.left and pressed == True:
             output.write("-")
@@ -55,7 +83,26 @@ def on_click(x, y, button, pressed):
     except IndexError:
         sys.stdout.write("")
 
+choice = 0
+print("Welcome to Py_Morse!")
+print("TIP: Use \'Ctrl+C\' to kill this script at any point!")
+while choice == 0:
+    try:
+        print("\nWhat would you like to do?\n1 - Translate text to morse\n2 - Translate morse to text\n3 - Write morse")
+        choice = int(input("Input:"))
+    except ValueError:
+        choice = 0
 
-with Listener(on_move=on_move, on_click=on_click, on_scroll=on_scroll) as listener:
-    with open(file, "a") as output:
-        listener.join()
+if choice == 1:
+    print("Input your string:")
+    user_string = input()
+    print(text_to_morse(user_string))
+elif choice == 2:
+    print("Input your morse:")
+    user_string = input()
+    print(morse_to_text(user_string))
+elif choice == 3:
+    print("Morse output will be written to \'msg.txt\'\nPlaintext output will be written to \'msg_translated.txt\'\n")
+    with Listener(on_move=on_move, on_click=on_click, on_scroll=on_scroll) as listener:
+        with open(file, "a") as output:
+            listener.join()
