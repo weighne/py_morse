@@ -44,7 +44,7 @@ def text_to_morse(phrase):
                 translated_phrase.append("/")
             else:
                 continue
-                
+
     return " ".join(translated_phrase)
 
 
@@ -59,7 +59,7 @@ def morse_to_text(morse):
                 translated_phrase.append(" ")
             else:
                 continue
-                
+
     return "".join(translated_phrase)
 
 
